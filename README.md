@@ -3,8 +3,8 @@
 ## Build and Install
 
 ```sh
-$ git clone https://github.com/abenhlal/bloom.git
-$ cd bitset
+$ git clone --recurse-submodules https://github.com/abenhlal/bloom.git
+$ cd bloom
 $ mkdir build
 $ cd build
 $ cmake ..
