@@ -3,12 +3,16 @@ project(bloom VERSION 0.1.0 LANGUAGES C)
 set(CMAKE_C_FLAGS "-std=c99 -Wall -Wextra -pedantic")
 
 include(GNUInstallDirs)
-add_subdirectory(third_party)
+include(CTest)
+
+# Build and install
+if( NOT "${CMAKE_PROJECT_NAME}" STREQUAL "libcborg")
+  add_subdirectory(third_party)
+endif()
 add_subdirectory(include)
 add_subdirectory(src)
 
 # TEST
-include(CTest)
 add_subdirectory(tests)
 
 # source: https://gitlab.kitware.com/cmake/community/-/wikis/FAQ#can-i-do-make-uninstall-with-cmake
