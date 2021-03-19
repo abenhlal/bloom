@@ -1,5 +1,5 @@
-#ifndef _BLOOM_FILTER_H
-#define _BLOOM_FILTER_H
+#ifndef _CBORG_BLOOM_H
+#define _CBORG_BLOOM_H
 
 #include <stdbool.h>
 #include <stdlib.h>
