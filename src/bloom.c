@@ -1,4 +1,4 @@
-#include "bloom.h"
+#include "cborg/bloom.h"
 
 bloom_filter_t *bloom_new(uint64_t (*h1)(const void *, size_t),
                           uint64_t (*h2)(const void *, size_t), size_t len) {

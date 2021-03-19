@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 #include <stdlib.h>
-#include "bitset.h"
+#include "cborg/bitset.h"
 
 /**
  *  TODO: see the document below to make the bloom filter more efficient with

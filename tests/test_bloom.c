@@ -2,11 +2,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#include "bloom.h"
-
-#include "hash/fnv.h"
-#include "hash/murmur.h"
-#include "hash/city.h"
+#include "cborg/bloom.h"
+#include "cborg/hash.h"
 
 void test_bloom_new() {
   bloom_filter_t *b1 = bloom_new(hash_fnv1a, hash_murmur2_64a, 1000);
