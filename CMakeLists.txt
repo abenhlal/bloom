@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
-project(bloom VERSION 0.1.0 LANGUAGES C)
+project(cborg-bloom VERSION 0.1.0 LANGUAGES C)
 set(CMAKE_C_FLAGS "-std=c99 -Wall -Wextra -pedantic")
 
 include(GNUInstallDirs)
 include(CTest)
 
 # Build and install
-if( NOT "${CMAKE_PROJECT_NAME}" STREQUAL "libcborg")
+if( "${CMAKE_PROJECT_NAME}" STREQUAL "cborg-bloom")
   add_subdirectory(third_party)
 endif()
 add_subdirectory(include)

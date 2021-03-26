@@ -25,15 +25,15 @@ typedef struct bloom_filter_t {
  * @param len Length of bloom array
  * @return Pointer of bloom filter structure
  */ 
-bloom_filter_t *bloom_new(uint64_t (*h1)(const void *, size_t),
+bloom_filter_t *cb_bloom_new(uint64_t (*h1)(const void *, size_t),
                           uint64_t (*h2)(const void *, size_t), size_t len);
 
-void bloom_delete(bloom_filter_t **bloom);
+void cb_bloom_delete(bloom_filter_t **bloom);
 
-void bloom_insert(bloom_filter_t *bloom, void *buf, size_t len);
+void cb_bloom_insert(bloom_filter_t *bloom, void *buf, size_t len);
 
-void bloom_intersection();
+void cb_bloom_intersection();
 
-bool bloom_get(bloom_filter_t *bloom, void *buf, size_t len);
+bool cb_bloom_get(bloom_filter_t *bloom, void *buf, size_t len);
 
 #endif

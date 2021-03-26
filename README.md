@@ -1,4 +1,4 @@
-# bloom
+# libcborg-bloom
 
 ## Build and Install
 
@@ -22,7 +22,7 @@ $ sudo make uninstall
 ## Usage and build
 
 ```sh
-$ gcc example.c -o example.bin -L/usr/local/lib/cborg -lbloom -lbitset -lhash
+$ gcc example.c -o example.bin -L/usr/local/lib/cborg -lcborg-bloom -lcborg-bitset -lcborg-hash
 $ ./example.bin
 ```
 
@@ -32,10 +32,10 @@ $ ./example.bin
 #include <cborg/hash.h>
 
 int main() {
-  bloom_filter_t *b1 = bloom_new(hash_fnv1a, hash_murmur2_64a, 1000);
-  bloom_insert(b1, "hello", 6);
-  bloom_insert(b1, "hello world!", 12);
-  bloom_delete(&b1);
+  bloom_filter_t *b1 = cb_bloom_new(cb_hash_fnv1a, cb_hash_murmur2_64a, 1000);
+  cb_bloom_insert(b1, "hello", 6);
+  cb_bloom_insert(b1, "hello world!", 12);
+  cb_bloom_delete(&b1);
   return 0;
 }
 
